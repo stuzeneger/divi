@@ -9,7 +9,7 @@ namespace divi;
  * @param string $separator Separator for result string.
  * @method getFooBarQix(int $number): string Return different text value from input integer.
  */
- 
+// test 
 final class FooBarQix {
 
     # init rules of build result string
