@@ -1,0 +1,13 @@
+{
+    "autoload": {
+        "classmap": [
+            "src/"
+        ],
+		"files": [
+            "config/settings.php"
+        ]
+    },
+    "require": {
+        "phpunit/phpunit": "^9"
+    }
+}
