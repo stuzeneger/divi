@@ -38,7 +38,7 @@ final class ServiceAswer implements ServiceInterface {
 
     public function getServiceAnswer(int $number): string {
 	
-	        # Checking input requirements
+	    # Checking input requirements
             if(($number < 1) || (fmod($number, 1) === 0)) return ERROR_MESSAGE; 
 
             # init result variable
@@ -51,14 +51,14 @@ final class ServiceAswer implements ServiceInterface {
             }
 			
 	       # count match multiples
-           $count=count($result);
+               $count=count($result);
 	  
 	       # build result string
 	       switch($count)
 	       {
 	   
 	       case 0:
-           $result = $this -> numberHasNoMultiples($number); 
+               $result = $this -> numberHasNoMultiples($number); 
 	       break;
 	   
 	       case 1:
@@ -77,52 +77,53 @@ final class ServiceAswer implements ServiceInterface {
        return $result;
        }
 	   
-	 /*
+    /*
      * Function return answer if number has single multiple.
      *
      * @param array $array Input subresult array.
      * @return string.
      */
 		
-		private function numberHasSingleMultiple(array $array): string { 
+	private function numberHasSingleMultiple(array $array): string { 
 		
 		return array_shift($array);
 		
 		}
 
-	 /*
+    /*
      * Function return answer if number has several multiples.
      *
      * @param array $array Input subresult array.
      * @return string.
      */
 	 
-		private function numberHasSeveralMultiples(array $array): string {
+	private function numberHasSeveralMultiples(array $array): string {
 		
 		return implode($this -> separator_multiple, $array);
 		
 		}
 		
-	 /*
+    /*
      * Function return answer if number has no multiple(-s).
      *
      * @param array $array Input subresult array.
      * @return string.
      */
-		private function numberHasNoMultiples(int $number): string { 
+	
+	private function numberHasNoMultiples(int $number): string { 
 		
 			return strval($number);
 		
 		}
 		
-		 /*
+	/*
          * Function find occurences and append string.
          *
          * @param int $number Input positive integer.
          * @return string.
         */
-
-        private function appendOccurrences(int $number): string {
+	
+	private function appendOccurrences(int $number): string {
 		
                 # create array from input integer digits
                 $numbers = str_split(strval($number));
